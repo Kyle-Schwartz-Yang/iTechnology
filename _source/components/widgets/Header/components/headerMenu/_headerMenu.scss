@@ -1,0 +1,311 @@
+@import '../headerList/_headerList.scss';
+
+
+.menu {
+
+  // .menu__burger
+  &__burger {
+    @include hamburger('_open', #fff, #fff);
+    width: 5rem;
+    height: 3rem;
+    transition: var(--transition-33s);
+
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    @media (max-width: 479px) {
+
+      width: 5rem;
+      height: 4rem;
+    }
+
+    @media (max-width: 375px) {
+      width: 4.5rem;
+      height: 3.5rem;
+    }
+  }
+
+  // .menu__overlay
+  &__overlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // ---------------------------------------
+    background-color: var(--BG-default-opacity);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-66s);
+    z-index: var(--ten);
+
+    &._active {
+
+      @media (max-width: 768px) {
+        overflow: auto;
+      }
+
+      opacity: 1;
+      visibility: visible;
+      pointer-events: inherit;
+
+      .menu__body {
+        transition: var(--transition-33s);
+        transition-delay: .66s;
+        transform: translateX(0);
+      }
+    }
+
+  }
+
+  // .menu__body
+  &__body {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    height: 100%;
+    min-width: 3rem;
+    transform: translateX(150%);
+    transition: var(--transition-66s);
+
+    @media (max-width: 479px) {
+      position: static;
+      margin: 1rem;
+      width: calc(100% - 2rem);
+    }
+  }
+
+  // .menu__title
+  &__title {
+    position: relative;
+    //------------------------------
+    font-size: 3rem;
+    letter-spacing: .8rem;
+    line-height: 1.1;
+    text-align: center;
+    text-transform: uppercase;
+    //-------------------------------
+    background-color: var(--BG-default);
+    border: 2px solid var(--secondary-color);
+    border-radius: .5rem;
+    //-------------------------------
+    letter-spacing: .2em;
+    padding: 1.5rem;
+    margin: 0rem 0rem 2.5rem 0rem;
+    //-------------------------------
+
+    & span:nth-child(2) {
+      background-color: var(--secondary-color);
+    }
+
+    & span:nth-child(4) {
+      background-color: var(--secondary-color);
+    }
+
+    @media (max-width: 479px) {
+      & span {
+        font-size: 2.1rem;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -3rem;
+      width: 5rem;
+      height: .2rem;
+      transform: rotate(90deg);
+      background-color: var(--secondary-color);
+    }
+
+    &::before {
+      right: 3rem;
+    }
+
+    &::after {
+      left: 3rem;
+    }
+
+    @media (max-width: 479px) {
+      padding: 1rem;
+      font-size: 2.3rem;
+    }
+
+    //-------------------------------
+  }
+
+  &__close {
+    position: absolute;
+    left: -8rem;
+    top: 2.5rem;
+    width: 6rem;
+    height: 6rem;
+    font-size: 5rem;
+    color: var(--color-white);
+    z-index: var(--zindex-base);
+    transition: var(--transition-33s);
+
+    &:hover {
+      color: var(--color-orange);
+    }
+
+    @media (max-width: 479px) {
+      position: static;
+      margin: 0px auto 30px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  // .menu__list
+
+  &__list {
+
+    // animation: move 1.2s infinite;
+    // animation-fill-mode: forwards;
+    // animation: swing 3s ease-in-out infinite;
+    // transform-origin: top center;
+    // transform-style: preserve-3d;
+    // backface-visibility: hidden;
+
+    // &:hover {
+    //   animation-play-state: paused;
+    // }
+    // @media (max-width: 479px) {
+    //   animation: none;
+    // }
+
+
+    position: relative;
+    padding: 5rem;
+    margin-bottom: 3rem;
+    border-radius: 3rem;
+    border: 2px solid var(--secondary-color);
+    background-color: var(--BG-default);
+    box-shadow: var(--box-shadow-default);
+
+
+    @media (max-width: 479px) {
+      padding: 2rem;
+    }
+  }
+
+  &__info-modal {
+    position: absolute;
+    cursor: pointer;
+    right: 2rem;
+    bottom: 2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    // ---------------------------------------
+
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow-default);
+    transition: var(--transition-33s);
+
+    // ---------------------------------------
+    &:hover {
+      transform: scale(1.1);
+      background-color: var(--color-silver);
+    }
+
+    // -------------------------------------
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      height: 5px;
+      background-color: var(--color-black);
+      transform: translateY(-60%) translateX(-50%) rotate(90deg);
+      box-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+      transition: .33s;
+      border-radius: 5px;
+    }
+
+    &::after {
+      width: 2rem;
+      top: 65%;
+    }
+
+    &::before {
+      width: 0.5rem;
+      top: 25%;
+    }
+
+    &._active {
+
+      &::after,
+      &::before {
+        width: 2.5rem;
+        height: 0.4rem;
+        left: 50%;
+        top: 50%;
+        box-shadow: none;
+        transition: .33s;
+      }
+
+      &::after {
+        transform: translateY(-50%) translateX(-50%) rotate(45deg);
+      }
+
+      &::before {
+        transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+      }
+    }
+
+    // -------------------------------------
+  }
+
+
+
+  // .menu__item
+
+
+  &__item {}
+
+
+
+  // .menu__link
+
+  &__link {
+
+    // -----------------------------------
+    @include flexbox(flex, flex-start, center, row, nowrap, 1.5rem);
+    cursor: pointer;
+    // width: 100%; //????
+    height: 65px; //????
+
+    // -----------------------------------
+    font-family: 'Simpson';
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+
+    // -----------------------------------
+    & .menu__icon {
+      font-size: 4rem;
+    }
+
+    &:hover {
+      color: var(--color-silver);
+      transition: var(--transition-33s);
+
+      & .menu__icon {
+        color: var(--color-orange);
+      }
+    }
+
+    &:active {
+      text-decoration: line-through;
+    }
+
+  }
+}

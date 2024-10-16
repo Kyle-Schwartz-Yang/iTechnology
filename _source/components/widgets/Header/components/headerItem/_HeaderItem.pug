@@ -1,0 +1,41 @@
+
+
+
+mixin _HeaderItem(props)
+  each item in props.contentItems
+      //-----------------------------------------DROPDOWN
+      if item.dropdown
+        li.dropdown(class=`${props.className}__item`)
+          div.dropdown__image(class=`${props.className}__image`)!= item.image
+          a.dropdown__link(href='#' class=`${props.className}__link`)
+            span= item.text
+            <i class="bi bi-caret-down-fill dropdown__arrow"></i>
+          ul.dropdown__menu
+            each subItem in item.dropdown
+              if subItem.subdropdown 
+                li.dropdown(class=`${props.className}__item`)
+                  a.dropdown__link(href='#' class=`${props.className}__link`)
+                    span= subItem.text
+                    <i class="bi bi-caret-down-fill dropdown__arrow"></i>
+                  ul.dropdown__menu
+                    each subsubItem in subItem.subdropdown
+                      li(class=`${props.className}__item`)
+                        a(href='#' class=`${props.className}__link`)
+                          span=subsubItem.text
+              else
+                li(class=`${props.className}__item`)
+                  a(href='#' class=`${props.className}__link`)
+                    span=subItem.text
+      //-----------------------------------------
+      else
+        li(class=`${props.className}__item`)
+          if item.image
+            div(class=`${props.className}__image`)!= item.image
+            a(
+              href=item.to || '#' 
+              class=`${props.className}__link ${item.classNamed || ''}`
+              aria-label=`goto...${item.text}`
+              data-modal-target=item.modalTarget
+              data-close-menu=item.closeMenuOnClick
+              )
+              span=item.text

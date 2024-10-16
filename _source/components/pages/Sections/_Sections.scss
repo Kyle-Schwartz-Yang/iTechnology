@@ -1,0 +1,27 @@
+.sections {
+  // min-height: 100vh;
+
+  position: relative;
+
+
+  &__title {
+    position: absolute;
+    left: 5rem;
+    top: 5rem;
+
+    @media (max-width: 768px) {
+      left: 2rem;
+      top: 10rem;
+      z-index: var(--one);
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .home-page .sections__title {
+    display: none;
+  }
+
+}

@@ -1,0 +1,16 @@
+//! EXAMPLE "NO USE"
+
+
+// ---------------------------------------------------------------------------------------------
+// @extend %heading;
+%heading {
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+// @extend %heading-large;
+%heading-large {
+  @extend %heading;
+  font-size: 2rem;
+}

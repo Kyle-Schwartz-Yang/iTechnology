@@ -1,0 +1,54 @@
+
+//- ----------------------------Наследственность
+//- extends ./pug/core/_loyaout.pug
+extends ./components/shared/settings/pug/core/_loyaout.pug
+//- ----------------------------Наследственность
+
+//-! -------------------------------------- PART
+//- include ./components/_connect.pug
+
+include ./components/pages/Landing/_Landing.pug
+//-! -------------------------------------- PART
+
+
+//-* -------------------------------------HEAD
+block settings
+  -
+    var settings = {
+      title: 'index page',
+      lang: 'en',
+    }
+
+prepend connection 
+  link(rel="stylesheet", href="./css/main.css")
+  //- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+  link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css")
+//-* -------------------------------------HEAD
+
+
+//-: --------------------------------------BODY
+block content
+  .wrapper
+    +Header()
+    main.main
+
+      +Home-page()
+      +Store-category()
+      +Random-products()
+      +Showcase()
+
+    //- ---------------------------
+    div(class='shopping-cart lock-padding')
+      +Basket()
+    +Modals-group()
+    //- ---------------------------
+    +Footer({type: 'secondary'})
+//-: --------------------------------------BODY
+
+
+
+
+
+
+
+

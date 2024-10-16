@@ -1,0 +1,38 @@
+
+//- -------------------------------------- varibles
+//- include ../helpers/_helpers.pug
+include ../variables/_variables.pug
+
+//- -------------------------------------- varibles
+
+
+block settings
+  -
+    var settings = {
+      title: 'default name',
+      lang: 'en',
+    }
+
+
+<!DOCTYPE html>
+html(lang=settings.lang)
+
+  head
+    block meta
+      include ./_meta.pug
+    block connection
+      link(rel="stylesheet", href=`${stylesPath}/style.css`)
+    block addScriptsInHead
+      //- script(type="module", src="./script.js" defer)
+    block title
+      title #{settings.title}
+  <body>
+    block content
+      h1 Динамическое содержимое:
+
+    block scripts
+      include ./_scripts.pug
+  </body>
+
+
+

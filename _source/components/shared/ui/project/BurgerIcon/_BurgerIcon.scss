@@ -1,0 +1,80 @@
+.burger {
+  width: 100%;
+  height: 100%;
+
+  @include flexbox(flex, center, center, column, null, 5px);
+
+  cursor: pointer;
+
+
+  &:hover {
+    transition: .33s;
+  }
+
+
+
+  &__bun-top,
+  &__bun-bottom {
+    width: 100%;
+    height: 20px;
+    background-color: #d7bb0f;
+    border-radius: 50% 50% 0 0;
+
+    position: relative;
+
+
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   right: 10px;
+    //   bottom: 5px;
+    //   background-color: rgba(18, 17, 17, 0.7);
+    //   width: 5px;
+    //   height: 5px;
+    //   border-radius: 50%;
+    // }
+  }
+
+
+  &__meat {
+    width: 100%;
+    height: 10px;
+    background-color: #863232;
+    top: 0px;
+    left: 0px;
+    border-radius: 5px;
+  }
+
+
+  &__bun-bottom {
+    top: auto;
+    bottom: 0;
+    border-radius: 0 0 50% 50%;
+    // transform: translateY(-3.5px) rotate(6.5deg);
+    // &::after {
+    //   left: 5px;
+    // }
+
+    // &::before {
+    //   right: 20px;
+    // }
+  }
+
+
+
+  &__bun-top {
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   left: 3px;
+    //   top: 0px;
+    //   background-color: var(--BG-default);
+    //   width: 10px;
+    //   height: 10px;
+    //   border-radius: 50%;
+    // }
+  }
+
+
+}

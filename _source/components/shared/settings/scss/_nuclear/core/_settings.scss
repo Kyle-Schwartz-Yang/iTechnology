@@ -1,0 +1,31 @@
+html {
+  font-size: $f-size-rem;
+
+  @supports (scrollbar-width: thin) {
+    scrollbar-color: #000 rgba(240, 240, 240, .1);
+    scrollbar-width: thin;
+  }
+}
+
+body {
+  font-family: $font-face;
+  background-color: var(--BG-default);
+  color: var(--color-white);
+  font-size: $f-size-default;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  @include flexbox(flex, null, null, column, null, null);
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.main {
+  flex: 1 0 auto; // (flex-grow:0; flex-shrink:1; flex-basis:auto;)
+}

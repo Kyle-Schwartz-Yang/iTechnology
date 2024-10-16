@@ -1,0 +1,125 @@
+
+
+
+mixin Showcase()
+  -
+    const swiper = [
+          {
+          title: 'Once Human', 
+          label: 'out now',
+          txt: 'Once Human is a multiplayer open-world survival game set in a post-apocalyptic world. Join forces with friends to fight for survival, construct your sanctuary, and conquer terrifying aberrations to unravel the truth behind the apocalypse.Do you still hold the answer to what it means to be human?',
+          image: `${assetsPath}/images/showcase-Once-Human.avif`,
+          link: 'Play for free',
+          button: 'Add to wishlist', 
+          },
+          {
+        
+          title: 'Destiny 2', 
+          label: 'out now',
+          txt: 'Once Human is a multiplayer open-world survival game set in a post-apocalyptic world. Join forces with friends to fight for survival, construct your sanctuary, and conquer terrifying aberrations to unravel the truth behind the apocalypse.Do you still hold the answer to what it means to be human?',
+          image: `${assetsPath}/images/showcase-Destiny.avif`,
+          link: 'Play for free',
+          button: 'Add to wishlist', 
+          },
+          {
+        
+          title: 'Black Myth Wukong', 
+          label: 'Available August 20',
+          txt: 'Black Myth: Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.',
+          image: `${assetsPath}/images/showcase-BlackMythWukong.avif`,
+          link: 'Play for free',
+          button: 'Add to wishlist', 
+          },
+          {
+        
+          title: 'Assassins Creed Shadows', 
+          label: 'comming soon',
+          txt: 'Pre-purchase now to get a bonus quest, Thrown to the Dogs. Experience an epic historical action-adventure story set in feudal Japan! Become a lethal shinobi Assassin and a powerful legendary samurai as you explore a beautiful open world in a time of chaos.',
+          image: `${assetsPath}/images/showcase-AssassinsCreed-Shadows.avif`,
+          link: 'Play for free',
+          button: 'Add to wishlist', 
+          },
+          {
+          
+          title: 'Controd', 
+          label: 'Closed beta live now',
+          txt: 'Once Human is a multiplayer open-world survival game set in a post-apocalyptic world. Join forces with friends to fight for survival, construct your sanctuary, and conquer terrifying aberrations to unravel the truth behind the apocalypse.Do you still hold the answer to what it means to be human?',
+          image: `${assetsPath}/images/showcase-control.avif`,
+          link: 'Play for free',
+          button: 'Add to wishlist', 
+          },
+          {
+        
+          title: 'Star Wars Outlaws', 
+          label: 'out now',
+          txt: 'Experience the first-ever open world Star Wars™ game and explore distinct locations across the galaxy, both iconic and new. Risk it all as scoundrel Kay Vess, seeking freedom and the means to start a new life. Fight, steal, and outwit your way through the galaxy’s crime syndicates as you join the galaxy’s most wanted. If you’re willing to take the risk, the galaxy is full of opportunity.',
+          image: `${assetsPath}/images/showcase-Star-Wars.avif`,
+          link: 'Play for free',
+          button: 'Add to wishlist', 
+          },
+    ]
+    const swiperThumbs = [
+      {
+        title: 'once Human',
+        thumbnail: `${assetsPath}/images/thumbnail-once-human.avif`,
+      },
+      {
+        title: 'Destiny 2', 
+        thumbnail: `${assetsPath}/images/thumbnail-distany2.avif`,
+      },
+      {
+        title: 'Black Myth Wukong',
+        thumbnail: `${assetsPath}/images/thumbnail-black-myth-wukong.webp`,
+      },
+      {
+        title: 'Assassins Creed Shadows', 
+        thumbnail: `${assetsPath}/images/thumbnail-assasins-creaed.webp`,
+      },
+      {
+        title: 'Controd',
+        thumbnail: `${assetsPath}/images/thumbnail-concord.avif`,
+      },
+      {
+        title: 'Star Wars Outlaws',
+        thumbnail: `${assetsPath}/images/thumbnail-star-wards.avif`,
+      },
+    ]
+    
+  -
+  +Sections('showcase', 'showcase')
+      .showcase__title showcase
+      .showcase__container
+        .showcase__swiper-container
+          div.showcase__showcase-swiper(class='swiper showcase-swiper')
+            div.swiper-wrapper.showcase-swiper__wrapper
+              each item in swiper
+                div.swiper-slide.showcase-swiper__slide
+                  .showcase__body.showcase-swiper__body
+                    figure.showcase__image.showcase-swiper__image
+                      img(src=item.image alt=item.title)
+                      figcaption.showcase__content.showcase-swiper__content
+                        div.showcase__subtitle.showcase-swiper__title #{item.title}
+                        div.showcase__descr.showcase-swiper__descr
+                          span.showcase__label.showcase-swiper__label #{item.label}
+                          span #{item.txt}
+                        .showcase__button.showcase-swiper__button
+                          a(href="") #{item.link}
+                          button(href="")
+                            span #{item.button}
+                            span <i class="bi bi-plus-circle"></i>
+          div.showcase__showcase-thumbs(class='swiper showcase-thumbs' thumbsSlider='')
+            .swiper-wrapper.showcase-thumbs__wrapper
+              each item in swiperThumbs
+                .swiper-slide.showcase-thumbs__slide
+                    .showcase-thumbs__thumbnail
+                      .showcase-thumbs__image
+                        img(src=item.thumbnail alt=item.title)
+                      .showcase-thumbs__title #{item.title}
+
+        
+          
+          
+
+
+
+

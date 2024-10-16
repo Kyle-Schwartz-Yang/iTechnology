@@ -1,0 +1,74 @@
+// @import '../../_fragments/TabbedSystem/_Tabbed-system.scss';
+
+
+
+.store-category {
+  padding: 15rem 0px;
+  min-height: 100vh;
+  position: relative;
+  background: var(--BG-default);
+
+  @media (max-width: 768px) {
+    padding: 10rem 0px;
+  }
+
+  @media (max-width: 479px) {
+    padding: 5rem 0px;
+  }
+
+  &__container {}
+
+
+  &__title {
+    font-size: 8rem;
+    text-transform: uppercase;
+    color: var(--color-white);
+    font-weight: 600;
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @media (max-width: 992px) {
+      display: none;
+    }
+
+
+  }
+
+
+  &__genre {}
+
+
+  &__tabs {
+
+    // &.on-animated {
+    //   opacity: 0;
+
+    //   .tab__contents {
+    //     opacity: 1; // Начальное состояние
+    //     transition: opacity 0.5s ease; // Настройка плавности
+    //   }
+    // }
+
+
+    // &._animation {
+    //   opacity: 1;
+
+    //   .tab__contents {
+    //     opacity: 1; // Начальное состояние
+    //     // transition: opacity 0.5s ease; // Настройка плавности
+    //     // // @include animation-delays-easy(5, 0.2s, 0.2s);
+    //   }
+    // }
+
+
+  }
+}
+
+// ---------------------------------------------------
+
+@media (max-width: 768px) {
+  .store-category .sections__title {
+    position: static;
+    margin: 0rem 0rem 3rem 3rem;
+  }
+}

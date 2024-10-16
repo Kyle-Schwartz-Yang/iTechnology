@@ -1,0 +1,10 @@
+//- mixins.pug
+mixin Footer(options = {type: 'primary'})
+    if options.type === 'secondary'
+      include ./_footer-secondary.pug       
+    else
+      include ./_footer-primary.pug
+
+
+
+

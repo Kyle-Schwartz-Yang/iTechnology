@@ -1,0 +1,51 @@
+/*
+//Расположение стилей 
+.shopping-cart {
+ @import '/scss/overall/elements/graphic'; 
+}
+*/
+
+
+.shopping-cart {
+  position: fixed;
+  z-index: var(--fixed);
+  bottom: 5px;
+  right: 5px;
+  animation: moveUpDown 1.2s infinite;
+  cursor: pointer;
+}
+
+.basket {
+  position: relative;
+  @include flexbox(flex, center, flex-end, row, nowrap, 2px);
+  padding: 20px;
+  border-radius: 50%;
+
+
+  &__counter {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+    @include flexbox(flex, center, center, null, null, null);
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--color-white);
+
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  &__icon {
+    border: 1px solid var(--color-white);
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    font-size: 4rem;
+    color: var(--secondary-color);
+  }
+}

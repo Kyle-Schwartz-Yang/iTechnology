@@ -1,0 +1,10 @@
+//- include ../../shared/unusual/Newspaper/_Newspaper.pug
+include ../../shared/ui/rarity/Newspaper/_Newspaper.pug
+
+
+mixin Sections(title, className)
+  section.sections(class=`${className}`)
+    h3.sections__title
+      +Newspaper(`${title}`)
+    if block
+      block 

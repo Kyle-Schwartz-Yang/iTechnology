@@ -1,0 +1,96 @@
+@import '../components/headerMenu/_headerMenu.scss';
+
+
+.header {
+
+  position: relative;
+  z-index: var(--nine);
+  background-color: (--BG-default);
+  box-shadow: var(--box-shadow-default);
+  padding: 2rem 0px;
+
+  &__title {
+
+    @media (max-width: 479px) {
+      max-width: 19rem;
+
+      & input {
+        font-size: 1.4rem
+      }
+    }
+
+    @media (max-width: 375px) {
+      max-width: 15rem;
+    }
+
+  }
+
+  &__container {
+    @include flexbox(flex, space-between, center, null, null, null);
+  }
+
+
+  &__logo {
+
+    width: 5rem;
+    height: 5rem;
+    display: inline-flex;
+    transform: scale(1);
+    transition: var(--transition-33s);
+
+    & i {
+      display: inline-block;
+      font-size: 5rem;
+      margin: auto;
+      // border: 1px solid red;
+      width: max-content;
+      height: max-content;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      color: var(--color-silver);
+    }
+  }
+
+
+  &__left,
+  &__right {
+    @include flexbox(flex, null, center, null, null, 5rem);
+
+    @media (max-width: 768.98px) {
+      @include flexbox(flex, null, center, null, null, 2rem);
+    }
+  }
+
+
+  &__signin {
+
+    & button {
+      font-family: 'Simpson';
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      color: var(--color-white);
+      box-shadow: var(--box-shadow-primary);
+      transition: var(--transition-33s);
+
+      &:hover {
+        color: var(--color-orange);
+      }
+
+    }
+
+    @media (max-width: 768.98px) {
+      display: none;
+    }
+  }
+
+}
+
+
+// !----------------------------------------------------------------------------
+
+
+
+//---------------------------------------------------

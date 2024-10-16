@@ -1,0 +1,54 @@
+
+
+mixin _HeaderList(props)
+  ul(class=`${props.className}__list`)
+    li(class=`${props.className}__info-modal`)(class='modals-buttons-group' data-close-menu data-modal-target='info-modal')
+    //- -----------------------------------------------------------------------------------------------
+    each item in props.contentItems
+        //-----------------------------------------DROPDOWN
+        if item.dropdown
+          li.dropdown(class=`${props.className}__item`)
+            //- div.dropdown__image(class=`${props.className}__image`)!= item.image
+            a.dropdown__link(href='#' class=`${props.className}__link`)
+              span: #{item.icon}
+              span= item.text
+              span: <i class="bi bi-caret-down-fill dropdown__arrow"></i>
+            ul.dropdown__menu
+              //- -----------------------------------------------------------------------------------------------
+              each subItem in item.dropdown
+                //-----------------------------------------SUB-DROPDOWN
+                if subItem.subdropdown 
+                  li.dropdown(class=`${props.className}__item`)
+                    a.dropdown__link(href='#' class=`${props.className}__link`)
+                      span: #{subItem.icon}
+                      span= subItem.text
+                      span: <i class="bi bi-caret-down-fill dropdown__arrow"></i>
+                      
+                    ul.dropdown__menu
+                      each subsubItem in subItem.subdropdown
+                        li(class=`${props.className}__item`)
+                          a(href='#' class=`${props.className}__link`)
+                            span: #{subsubItem.icon}
+                            span=subsubItem.text
+                //-----------------------------------------SUB-DROPDOWN
+                else
+                  li(class=`${props.className}__item`)
+                    a(href='#' class=`${props.className}__link`)
+                      span: #{subItem.icon}
+                      span=subItem.text
+                      
+        //-----------------------------------------DROPDOWN
+        else
+          li(class=`${props.className}__item`)
+              a(
+                href=item.to || '#' 
+                class=`${props.className}__link ${item.classNamed || ''}`
+                aria-label=`goto...${item.text}`
+                data-modal-target=item.modalTarget
+                data-close-menu=item.closeMenuOnClick
+                )
+                span: #{item.icon}
+                span=item.text
+
+    //- ------------------------------------------------------------------------------------------------
+

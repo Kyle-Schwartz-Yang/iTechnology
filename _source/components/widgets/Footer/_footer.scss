@@ -1,0 +1,57 @@
+// Можно вынести в отдельный файл
+.footer-primary {
+
+  &__container {
+    @include flexbox(flex, center, center, null, null, 30px);
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: var(--success-color);
+  }
+
+
+
+
+
+
+}
+
+// Можно вынести в отдельный файл
+.footer-secondary {
+
+  &__container {
+    @include flexbox(flex, center, center, null, null, 30px);
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+
+  &__title {
+    font-size: 2rem;
+    font-family: "Life Savers", serif;
+    font-weight: 900;
+    position: relative;
+
+    &::after {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      width: 150%;
+      height: 2px;
+
+    }
+  }
+}
+
+// Общие настройки можно оставить здесь, но я считаю что лучше избегать общих настроек если это не жмвой case
+.footer {
+  padding: 50px 0px;
+  background-color: #000;
+
+
+}

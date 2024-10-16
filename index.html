@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>index page</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__left"><a class="header__logo" href="/"><i class="bi bi-github"></i></a>
+          <div class="header__title">
+            <p>STORE</p>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__signin"><button class="default modals-buttons-group" type="button"
+              data-modal-target="signin-modal">Sing In</button></div>
+          <div class="menu">
+            <div class="menu__burger">
+              <div class="burger"><span class="burger__bun-top"> </span><span class="burger__meat"> </span><span
+                  class="burger__bun-bottom"> </span></div>
+            </div>
+            <nav class="menu__overlay">
+              <div class="menu__body"><button class="menu__close" type="button" aria-label="Close menu"><i
+                    class="bi bi-x-square"></i></button>
+                <h2 class="menu__title"><span class="newspaper-clipping"><span
+                      style="transform: rotate(-5deg);">m</span><span style="transform: rotate(5deg);">e</span><span
+                      style="transform: rotate(-10deg);">n</span><span style="transform: rotate(10deg);">u</span></span>
+                </h2>
+                <ul class="menu__list">
+                  <li class="menu__info-modal modals-buttons-group" data-close-menu="data-close-menu"
+                    data-modal-target="info-modal"></li>
+                  <li class="menu__item"><a class="menu__link " href="#" aria-label="goto...Home"><span><i
+                          class="bi bi-house-fill menu__icon"></i
+                          class="bi bi-house-fill menu__icon"></span><span>Home</span></a></li>
+                  <li class="dropdown menu__item"><a class="dropdown__link menu__link" href="#"><span><i
+                          class="bi bi-search menu__icon"></i
+                          class="bi bi-search menu__icon"></span><span>Sections</span><span><i
+                          class="bi bi-caret-down-fill dropdown__arrow"></i></span></a>
+                    <ul class="dropdown__menu">
+                      <li class="menu__item"><a class="menu__link" href="#"><span><i class="bi bi-dot menu__icon"></i
+                              class="bi bi-dot menu__icon"></span><span>Tabsing 1</span></a></li>
+                      <li class="dropdown menu__item"><a class="dropdown__link menu__link" href="#"><span><i
+                              class="bi bi-dot menu__icon"></i
+                              class="bi bi-dot menu__icon"></span><span>submenu</span><span><i
+                              class="bi bi-caret-down-fill dropdown__arrow"></i></span></a>
+                        <ul class="dropdown__menu">
+                          <li class="menu__item"><a class="menu__link" href="#"><span><i
+                                  class="bi bi-dot menu__icon"></i class="bi bi-dot menu__icon"></span><span>Tabsing
+                                2</span></a></li>
+                          <li class="menu__item"><a class="menu__link" href="#"><span><i
+                                  class="bi bi-dot menu__icon"></i class="bi bi-dot menu__icon"></span><span>Tabsing
+                                2</span></a></li>
+                          <li class="menu__item"><a class="menu__link" href="#"><span><i
+                                  class="bi bi-dot menu__icon"></i class="bi bi-dot menu__icon"></span><span>Tabsing
+                                2</span></a></li>
+                        </ul>
+                      </li>
+                      <li class="menu__item"><a class="menu__link" href="#"><span><i class="bi bi-dot menu__icon"></i
+                              class="bi bi-dot menu__icon"></span><span>Tabsing 1</span></a></li>
+                    </ul>
+                  </li>
+                  <li class="menu__item"><a class="menu__link modals-buttons-group" href="#" aria-label="goto...Help"
+                      data-modal-target="info-modal" data-close-menu="data-close-menu"><span><i
+                          class="bi bi-question-circle menu__icon"></i
+                          class="bi bi-question-circle menu__icon"></span><span>Help</span></a></li>
+                  <li class="menu__item"><a class="menu__link modals-buttons-group" href="#" aria-label="goto...Sing in"
+                      data-modal-target="signin-modal" data-close-menu="data-close-menu"><span><i
+                          class="bi bi-person-circle menu__icon"></i
+                          class="bi bi-person-circle menu__icon"></span><span>Sing in</span></a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="sections home-page">
+        <h3 class="sections__title"><span class="newspaper-clipping"><span
+              style="transform: rotate(-5deg);">H</span><span style="transform: rotate(5deg);">o</span><span
+              style="transform: rotate(-10deg);">m</span><span style="transform: rotate(10deg);">e</span></span></h3>
+        <div class="home-page__container">
+          <h1 class="home-page__title"><span>Legendary</span><span>Store</span></h1>
+          <p class="home-page__txt">Join us as we talk about love and other concepts of a human experence.</p>
+          <div class="home-page__button"><button class="button-global--forward button-global modals-buttons-group"
+              type="button" aria-label="Open Registration modal" data-modal-target="signin-modal">Join
+              Now</button><button class="button-global--reverse button-global modals-buttons-group" type="button"
+              aria-label="Open Information" data-modal-target="info-modal">Learn more</button></div>
+        </div>
+      </section>
+      <section class="sections store-category">
+        <h3 class="sections__title"><span class="newspaper-clipping"><span
+              style="transform: rotate(-5deg);">s</span><span style="transform: rotate(5deg);">t</span><span
+              style="transform: rotate(-10deg);">o</span><span style="transform: rotate(10deg);">r</span><span
+              style="transform: rotate(0deg);">e</span></span></h3>
+        <h2 class="store-category__title">Genre games</h2>
+        <div class="store-category__container">
+          <div class="store-category__genre">
+            <div class="tab store-category__tabs" id="tab" data-tabbed="store-category">
+              <div class="tab__buttons store-category__tabs__buttons">
+                <div class="tab__btn store-category__tabs__btn"><button class="tab-button" type="button"
+                    data-button-system="all">All</button><button class="tab-button" type="button"
+                    data-button-system="Horror">Horror</button><button class="tab-button" type="button"
+                    data-button-system="Action">Action</button><button class="tab-button" type="button"
+                    data-button-system="Survarial">Survarial</button></div>
+                <div class="tab__search store-category__tabs__search">
+                  <div class="search-default">
+                    <div class="search-default__button"><button type="button" aria-label="Search store"> <span><i
+                            class="bi bi-search"></i></span></button></div>
+                    <div class="search-default__body">
+                      <div class="search-default__input"> <input class="search-input tabbed-categories-search"
+                          type="search" placeholder="Search Sections..." data-search="tabbed-categories-search" /></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab__contents store-category__tabs__contents ">
+                <div class="tab-content card" data-content-system="Horror"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/horror-card1.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Sons Of The Forest</h4>
+                          <p class="card__txt">Sent to find a missing billionaire on a remote island, you find yourself
+                            in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with
+                            friends, in this terrifying new open-wor...</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">295 $</span><span
+                        class="discounted-price">97 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">233</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Horror"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/horror-card2.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Project Zomboid</h4>
+                          <p class="card__txt">Project Zomboid is the ultimate in zombie survival. Alone or in MP: you
+                            loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset,
+                            a vast map, massively customisable s...</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">105 $</span><span
+                        class="discounted-price">54 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">186</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Horror"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/horror-card3.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Black Myth: Wukong</h4>
+                          <p class="card__txt">Black Myth: Wukong is an action movie based on Chinese mythology. As the
+                            Chosen One, you will embark on an adventure full of challenges and wonders, in which you
+                            will have to lift the veil of secrecy ...</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">665 $</span><span
+                        class="discounted-price">27 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">27</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Action"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/action-card1.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Naraka: Blandepoin</h4>
+                          <p class="card__txt">NARAKA: BLADEPOINT is a 60-player battle royale game inspired by the
+                            myths and legends of the Far East. The game combines various types of martial arts, a vast
+                            arsenal of melee and ranged weapons, as ...</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Action"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/action-card2.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Pubg: Battlegrounds</h4>
+                          <p class="card__txt">With over 175 awards and 250 top ratings from gaming publications, RDR2
+                            is the epic story of outlaw Arthur Morgan and the Van der Linde gang as they flee the law
+                            across America at the dawn of the mode...</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Action"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/action-card3.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Red Dead Redemption 2</h4>
+                          <p class="card__txt">Land in strategically important places, get weapons and supplies and try
+                            to survive and be the last team left on one of the many battlefields.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Survarial"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/survarial-card1.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Valheim</h4>
+                          <p class="card__txt">Apex Legends is an award-winning free-to-play hero shooter from Respawn
+                            Entertainment. Master the ins and outs of playing as a growing number of legendary
+                            characters and use their powerful skills to i...</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Survarial"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/survarial-card2.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Dont Starve Together</h4>
+                          <p class="card__txt">Fight, Farm, Build and Explore Together in the standalone multiplayer
+                            expansion to the uncompromising wilderness survival game, Dont Starve.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+                <div class="tab-content card" data-content-system="Survarial"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="./assets/images/survarial-card3.jpg" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">Apex Legends</h4>
+                          <p class="card__txt">A survival game in which you explore a vast fantasy world steeped in
+                            Norse mythology and Viking culture.</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sections random-products">
+        <h3 class="sections__title"><span class="newspaper-clipping"><span
+              style="transform: rotate(-5deg);">P</span><span style="transform: rotate(5deg);">u</span><span
+              style="transform: rotate(-10deg);">r</span><span style="transform: rotate(10deg);">c</span><span
+              style="transform: rotate(0deg);">h</span><span style="transform: rotate(-5deg);">a</span><span
+              style="transform: rotate(5deg);">s</span><span style="transform: rotate(-10deg);">e</span></span></h3>
+        <div class="random-products__container">
+          <div class="random-products__auction">
+            <div class="random-products__item" id="randomCard"><template id="card-template">
+                <div class=" card"><a class="card__link" href="#">
+                    <figure class="card__media"><img src="" alt="image" />
+                      <figcaption class="card__overlay card__overlay">
+                        <div class="card__content">
+                          <div class="card__preview">
+                            <div class="card__video-wrapper"><video class="card__video" autoplay="autoplay" loop="loop"
+                                muted="muted"></video></div>
+                          </div>
+                        </div>
+                        <div class="card__info">
+                          <h4 class="card__title">No title</h4>
+                          <p class="card__txt">No description</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </a>
+                  <div class="card__footer">
+                    <div class="card__actions"><button class="card__purchase-btn" type="button"><span>buy</span><span><i
+                            class="bi bi-cart4"></i></span></button></div>
+                    <div class="card__pricing"><span class="original-price">999 $</span><span
+                        class="discounted-price">256 $</span></div>
+                    <div class="card__likes"><span class="heart-icon"><i class="bi bi-suit-heart-fill"></i></span><span
+                        class="likes-count">1.618</span></div>
+                  </div>
+                </div>
+              </template></div>
+            <div class="random-products__body">
+              <h3 class="random-products__title">Title not found </h3>
+              <p class="random-products__text">No description game!</p><button class="random-products__button"
+                id="changeCardButton"> <span>Random</span><span><i class="bi bi-arrow-clockwise"></i></span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sections showcase">
+        <h3 class="sections__title"><span class="newspaper-clipping"><span
+              style="transform: rotate(-5deg);">s</span><span style="transform: rotate(5deg);">h</span><span
+              style="transform: rotate(-10deg);">o</span><span style="transform: rotate(10deg);">w</span><span
+              style="transform: rotate(0deg);">c</span><span style="transform: rotate(-5deg);">a</span><span
+              style="transform: rotate(5deg);">s</span><span style="transform: rotate(-10deg);">e</span></span></h3>
+        <div class="showcase__title">showcase</div>
+        <div class="showcase__container">
+          <div class="showcase__swiper-container">
+            <div class="showcase__showcase-swiper swiper showcase-swiper">
+              <div class="swiper-wrapper showcase-swiper__wrapper">
+                <div class="swiper-slide showcase-swiper__slide">
+                  <div class="showcase__body showcase-swiper__body">
+                    <figure class="showcase__image showcase-swiper__image"><img
+                        src="./assets/images/showcase-Once-Human.avif" alt="Once Human" />
+                      <figcaption class="showcase__content showcase-swiper__content">
+                        <div class="showcase__subtitle showcase-swiper__title">Once Human</div>
+                        <div class="showcase__descr showcase-swiper__descr"><span
+                            class="showcase__label showcase-swiper__label">out now</span><span>Once Human is a
+                            multiplayer open-world survival game set in a post-apocalyptic world. Join forces with
+                            friends to fight for survival, construct your sanctuary, and conquer terrifying aberrations
+                            to unravel the truth behind the apocalypse.Do you still hold the answer to what it means to
+                            be human?</span></div>
+                        <div class="showcase__button showcase-swiper__button"><a href="">Play for free</a><button
+                            href=""><span>Add to wishlist</span><span><i class="bi bi-plus-circle"></i></span></button>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-swiper__slide">
+                  <div class="showcase__body showcase-swiper__body">
+                    <figure class="showcase__image showcase-swiper__image"><img
+                        src="./assets/images/showcase-Destiny.avif" alt="Destiny 2" />
+                      <figcaption class="showcase__content showcase-swiper__content">
+                        <div class="showcase__subtitle showcase-swiper__title">Destiny 2</div>
+                        <div class="showcase__descr showcase-swiper__descr"><span
+                            class="showcase__label showcase-swiper__label">out now</span><span>Once Human is a
+                            multiplayer open-world survival game set in a post-apocalyptic world. Join forces with
+                            friends to fight for survival, construct your sanctuary, and conquer terrifying aberrations
+                            to unravel the truth behind the apocalypse.Do you still hold the answer to what it means to
+                            be human?</span></div>
+                        <div class="showcase__button showcase-swiper__button"><a href="">Play for free</a><button
+                            href=""><span>Add to wishlist</span><span><i class="bi bi-plus-circle"></i></span></button>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-swiper__slide">
+                  <div class="showcase__body showcase-swiper__body">
+                    <figure class="showcase__image showcase-swiper__image"><img
+                        src="./assets/images/showcase-BlackMythWukong.avif" alt="Black Myth Wukong" />
+                      <figcaption class="showcase__content showcase-swiper__content">
+                        <div class="showcase__subtitle showcase-swiper__title">Black Myth Wukong</div>
+                        <div class="showcase__descr showcase-swiper__descr"><span
+                            class="showcase__label showcase-swiper__label">Available August 20</span><span>Black Myth:
+                            Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One
+                            to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the
+                            veil of a glorious legend from the past.</span></div>
+                        <div class="showcase__button showcase-swiper__button"><a href="">Play for free</a><button
+                            href=""><span>Add to wishlist</span><span><i class="bi bi-plus-circle"></i></span></button>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-swiper__slide">
+                  <div class="showcase__body showcase-swiper__body">
+                    <figure class="showcase__image showcase-swiper__image"><img
+                        src="./assets/images/showcase-AssassinsCreed-Shadows.avif" alt="Assassins Creed Shadows" />
+                      <figcaption class="showcase__content showcase-swiper__content">
+                        <div class="showcase__subtitle showcase-swiper__title">Assassins Creed Shadows</div>
+                        <div class="showcase__descr showcase-swiper__descr"><span
+                            class="showcase__label showcase-swiper__label">comming soon</span><span>Pre-purchase now to
+                            get a bonus quest, Thrown to the Dogs. Experience an epic historical action-adventure story
+                            set in feudal Japan! Become a lethal shinobi Assassin and a powerful legendary samurai as
+                            you explore a beautiful open world in a time of chaos.</span></div>
+                        <div class="showcase__button showcase-swiper__button"><a href="">Play for free</a><button
+                            href=""><span>Add to wishlist</span><span><i class="bi bi-plus-circle"></i></span></button>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-swiper__slide">
+                  <div class="showcase__body showcase-swiper__body">
+                    <figure class="showcase__image showcase-swiper__image"><img
+                        src="./assets/images/showcase-control.avif" alt="Controd" />
+                      <figcaption class="showcase__content showcase-swiper__content">
+                        <div class="showcase__subtitle showcase-swiper__title">Controd</div>
+                        <div class="showcase__descr showcase-swiper__descr"><span
+                            class="showcase__label showcase-swiper__label">Closed beta live now</span><span>Once Human
+                            is a multiplayer open-world survival game set in a post-apocalyptic world. Join forces with
+                            friends to fight for survival, construct your sanctuary, and conquer terrifying aberrations
+                            to unravel the truth behind the apocalypse.Do you still hold the answer to what it means to
+                            be human?</span></div>
+                        <div class="showcase__button showcase-swiper__button"><a href="">Play for free</a><button
+                            href=""><span>Add to wishlist</span><span><i class="bi bi-plus-circle"></i></span></button>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-swiper__slide">
+                  <div class="showcase__body showcase-swiper__body">
+                    <figure class="showcase__image showcase-swiper__image"><img
+                        src="./assets/images/showcase-Star-Wars.avif" alt="Star Wars Outlaws" />
+                      <figcaption class="showcase__content showcase-swiper__content">
+                        <div class="showcase__subtitle showcase-swiper__title">Star Wars Outlaws</div>
+                        <div class="showcase__descr showcase-swiper__descr"><span
+                            class="showcase__label showcase-swiper__label">out now</span><span>Experience the first-ever
+                            open world Star Wars™ game and explore distinct locations across the galaxy, both iconic and
+                            new. Risk it all as scoundrel Kay Vess, seeking freedom and the means to start a new life.
+                            Fight, steal, and outwit your way through the galaxy’s crime syndicates as you join the
+                            galaxy’s most wanted. If you’re willing to take the risk, the galaxy is full of
+                            opportunity.</span></div>
+                        <div class="showcase__button showcase-swiper__button"><a href="">Play for free</a><button
+                            href=""><span>Add to wishlist</span><span><i class="bi bi-plus-circle"></i></span></button>
+                        </div>
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="showcase__showcase-thumbs swiper showcase-thumbs" thumbsSlider="">
+              <div class="swiper-wrapper showcase-thumbs__wrapper">
+                <div class="swiper-slide showcase-thumbs__slide">
+                  <div class="showcase-thumbs__thumbnail">
+                    <div class="showcase-thumbs__image"><img src="./assets/images/thumbnail-once-human.avif"
+                        alt="once Human" /></div>
+                    <div class="showcase-thumbs__title">once Human</div>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-thumbs__slide">
+                  <div class="showcase-thumbs__thumbnail">
+                    <div class="showcase-thumbs__image"><img src="./assets/images/thumbnail-distany2.avif"
+                        alt="Destiny 2" /></div>
+                    <div class="showcase-thumbs__title">Destiny 2</div>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-thumbs__slide">
+                  <div class="showcase-thumbs__thumbnail">
+                    <div class="showcase-thumbs__image"><img src="./assets/images/thumbnail-black-myth-wukong.webp"
+                        alt="Black Myth Wukong" /></div>
+                    <div class="showcase-thumbs__title">Black Myth Wukong</div>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-thumbs__slide">
+                  <div class="showcase-thumbs__thumbnail">
+                    <div class="showcase-thumbs__image"><img src="./assets/images/thumbnail-assasins-creaed.webp"
+                        alt="Assassins Creed Shadows" /></div>
+                    <div class="showcase-thumbs__title">Assassins Creed Shadows</div>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-thumbs__slide">
+                  <div class="showcase-thumbs__thumbnail">
+                    <div class="showcase-thumbs__image"><img src="./assets/images/thumbnail-concord.avif"
+                        alt="Controd" /></div>
+                    <div class="showcase-thumbs__title">Controd</div>
+                  </div>
+                </div>
+                <div class="swiper-slide showcase-thumbs__slide">
+                  <div class="showcase-thumbs__thumbnail">
+                    <div class="showcase-thumbs__image"><img src="./assets/images/thumbnail-star-wards.avif"
+                        alt="Star Wars Outlaws" /></div>
+                    <div class="showcase-thumbs__title">Star Wars Outlaws</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="shopping-cart lock-padding">
+      <div class="basket"><span class="basket__counter">256</span><span class="basket__icon"><i
+            class="bi bi-bag-heart"></i></span></div>
+    </div>
+    <div class="modals-group hidden">
+      <div class="modal" id="signin-modal">
+        <div class="modal__wrapper">
+          <div class="modal__body"><button class="modal__cross" aria-label="Close modal"></button>
+            <div class="form-signin">
+              <form class="form-signin__body" action="#" id="form-signin">
+                <h1 class="form-signin__title">Sign Up</h1>
+                <div class="form-signin__item"> <label class="label form-signin__label" for="formSigninLogin"
+                    aria-label="Enter your Username">Email address*:</label><input
+                    class="input form-signin__input _req _email" id="formSigninLogin" type="text" name="login"
+                    placeholder="Enter your email" aria-label="Enter your Username" /></div>
+                <div class="form-signin__item"><a class="form-signin__link" href="/">Forgot password?</a><label
+                    class="label form-signin__label" for="formSigninPass"
+                    aria-label="Enter your password">Password*:</label><input class="input form-signin__input _req"
+                    id="formSigninPass" type="password" name="password" placeholder="Enter your password"
+                    aria-label="Enter your password" /></div>
+                <div class="form-signin__item">
+                  <div class="checkbox"><input class="checkbox__input _req" type="checkbox" name="agreement"
+                      id="formAgreement" /><label class="checkbox__label" for="formAgreement"> <span> I give my consent
+                        for the processing of personal data in accordance with the current privacy policy of the
+                        organization handling the data. <a href="#">read privacy policy</a> </span></label></div>
+                </div><button class="button-global form-signin__submit button-animated" type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="info-modal">
+        <div class="modal__wrapper">
+          <div class="modal__body"><button class="modal__cross" aria-label="Close modal"></button>
+            <div class="info-modal__content">
+              <div class="info-modal__title"><span><i class="bi bi-info-circle-fill"></i></span>
+                <h3>Information</h3>
+              </div>
+              <p class="info-modal__text">Frontend development is not just about creating interfaces. It is the art of
+                making your ideas visible, tangible and inspiring. Every line of code becomes a brush, every element a
+                part of your virtual canvas.</p><button class="button-global info-modal__close button-animated"
+                type="button" aria-label="Close modal" data-close-modal="data-close-modal">Its clear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-secondary">
+      <div class="footer-secondary__container">
+        <h1 class="footer-secondary__title">Secondary Footer</h1>
+      </div>
+    </footer>
+  </div>
+  <script type="module" src="./script/app.js"></script>
+</body>
+
+</html>

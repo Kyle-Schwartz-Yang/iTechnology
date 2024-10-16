@@ -1,0 +1,21 @@
+
+include ../../../../shared/ui/project/BurgerIcon/_BurgerIcon.pug
+include ../../../../shared/ui/rarity/Newspaper/_Newspaper.pug
+
+//- ----------------------------------------------------------
+include ../headerList/_HeaderList.pug
+
+
+
+mixin _headerMenu(props)
+
+    div(class=`${props.className}`)
+      div(class=`${props.className}__burger`)
+        +BurgerIcon()
+      nav(class=`${props.className}__overlay`)
+        div(class=`${props.className}__body`)
+          button(type='button', aria-label='Close menu' class=`${props.className}__close`)
+            <i class="bi bi-x-square"></i>
+          h2(class=`${props.className}__title`)
+            +Newspaper('menu')  
+          +_HeaderList(props)

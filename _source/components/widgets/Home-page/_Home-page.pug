@@ -1,0 +1,24 @@
+
+include ../../pages/Sections/_Sections.pug
+include ../../shared/ui/common/Button/_Button.pug
+//- ---------------------------------------------------
+
+
+mixin Home-page()
+  +Sections('Home', 'home-page')
+    .home-page__container
+      h1.home-page__title
+        span Legendary
+        span Store
+      p.home-page__txt Join us as we talk about love and other concepts of a human experence.
+      .home-page__button
+        +Button({
+          text: 'Join Now',
+          variant: 'button-global--forward',
+          className: 'button-global modals-buttons-group'})(aria-label ='Open Registration modal' data-modal-target='signin-modal')
+        +Button({
+          text: 'Learn more',
+          variant: 'button-global--reverse',
+          className: 'button-global modals-buttons-group'})(aria-label ='Open Information' data-modal-target='info-modal')
+
+

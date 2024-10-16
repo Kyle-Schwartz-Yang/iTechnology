@@ -1,0 +1,102 @@
+.random-products {
+
+  @include background('#{$assets}/images/bg_body.png', #363636, repeat, center, null, null);
+  clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+  padding: 30rem 0px 20rem;
+
+  @media (max-width: 992px) {
+    clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 100%);
+    padding: 20rem 0px 10rem;
+  }
+
+  &__auction {
+    @include flexbox(flex, null, null, row, nowrap, 4rem);
+
+    @media (max-width: 992px) {
+      @include flexbox(flex, null, null, column, nowrap, 4rem);
+    }
+  }
+
+
+
+  &__item {
+
+    flex-basis: 40%;
+    position: relative;
+    box-shadow: var(--box-shadow-primary);
+
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: var(--two);
+      width: 105%;
+      height: 100%;
+      left: 50%;
+      top: -15%;
+      transform: translateX(-50%);
+      @include background('#{$assets}/images/beam.png', null, no-repeat, null, cover, null);
+      animation: offon 1s infinite;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -75%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      @include background('#{$assets}/images/ufo.png', null, no-repeat, center, contain, null);
+      animation: swing 3.5s ease-in-out infinite;
+    }
+
+
+
+    @media (max-width: 992px) {
+
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+  }
+
+  &__body {
+    flex-basis: 60%;
+  }
+
+
+  &__title {
+    @include text-styles($font-size: 4rem, $line-height: 1.1);
+    color: var(--color-title);
+    text-shadow: var(--text-shodow-default);
+    margin: 0rem 0rem 2rem 0rem;
+
+  }
+
+  &__text {
+    @include text-styles($font-size: 2rem, $line-height: 1.2, $letter-spacing: .1rem, );
+    text-shadow: var(--text-shodow-default);
+    margin: 0rem 0rem 3rem 0rem;
+  }
+
+
+  &__button {
+    @include flexbox(inline-flex, center, center, row, nowrap, 1rem);
+    background-color: var(--secondary-color);
+    color: var(--color-white);
+    padding: 1rem;
+    text-transform: uppercase;
+
+    & span:nth-child(2) {
+      transition: var(--transition-33s);
+      transform: rotate(0deg);
+    }
+
+    &:hover span {
+      transform: rotate(360deg);
+    }
+  }
+}

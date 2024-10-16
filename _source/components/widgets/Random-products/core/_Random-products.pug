@@ -1,0 +1,37 @@
+
+include ../../../pages/Sections/_Sections.pug
+
+include ../../../entities/CardProduct/_CardProduct
+
+
+
+mixin productBody()
+  h3.random-products__title Title not found 
+  p.random-products__text No description game!
+  button.random-products__button(id='changeCardButton') 
+    span Random
+    span: <i class="bi bi-arrow-clockwise"></i>
+    
+
+
+
+mixin Random-products()
+  -
+    const selector = 'random-products';
+  -
+
+  +Sections('Purchase', 'random-products')
+    .random-products__container
+      //- На выносить в отдельный компоненент 
+      .random-products__auction
+        .random-products__item(id='randomCard')
+          +CardProduct()
+        .random-products__body
+          +productBody()
+
+
+            
+
+
+
+

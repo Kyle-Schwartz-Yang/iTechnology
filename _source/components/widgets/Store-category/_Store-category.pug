@@ -1,0 +1,26 @@
+
+include ../../pages/Sections/_Sections.pug
+
+include ../../features/TabbedSystem/_Tabbed-system.pug
+
+
+//- 
+  PUG
+  ---------| +Tabbed-system() |
+  ---------| +Sections() |
+  STYLE
+  --------| Bootstrap icons |
+//- 
+//- ---------------------------------------------------
+
+mixin Store-category()
+  +Sections('store', 'store-category')
+    h2.store-category__title Genre games
+    .store-category__container
+      .store-category__genre
+        +Tabbed-system('store-category__tabs', 'store-category')
+
+        
+
+  
+

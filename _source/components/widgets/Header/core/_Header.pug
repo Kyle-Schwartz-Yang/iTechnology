@@ -1,0 +1,81 @@
+
+
+include ../../../shared/ui/common/Button/_Button.pug
+include ../components/headerMenu/_headerMenu.pug
+
+
+
+
+mixin Header(data)
+  -
+    const headerClasss = 'header'
+    const options = {
+      className: 'menu',
+      contentItems : [
+        {
+          text: 'Home',  
+          icon: `i class="bi bi-house-fill menu__icon"`
+        }, 
+        {
+        text: 'Sections', 
+        icon: `i class="bi bi-search menu__icon"`,
+        dropdown: [
+          { 
+            to: "#", 
+            text: "Tabsing 1",
+            icon: `i class="bi bi-dot menu__icon"`,
+          },
+          { 
+          to: "#", 
+          text: "submenu",
+          icon: `i class="bi bi-dot menu__icon"`,
+          
+          subdropdown: [
+            { to: "#", text: "Tabsing 2",icon: `i class="bi bi-dot menu__icon"`, },
+            { to: "#", text: "Tabsing 2",icon: `i class="bi bi-dot menu__icon"`, },
+            { to: "#", text: "Tabsing 2",icon: `i class="bi bi-dot menu__icon"`, },
+          ],
+          },
+          { 
+            to: "#", 
+            text: "Tabsing 1" ,
+            icon: `i class="bi bi-dot menu__icon"`,
+          },
+        ]
+        },
+        {
+          text: 'Help', 
+          icon: 'i class="bi bi-question-circle menu__icon"', 
+          modalTarget : 'info-modal', 
+          closeMenuOnClick : 'data-close-menu', 
+          classNamed: 'modals-buttons-group' 
+        },
+        {
+          text: 'Sing in', 
+          icon: 'i class="bi bi-person-circle menu__icon"', 
+          modalTarget : 'signin-modal', 
+          closeMenuOnClick : 'data-close-menu',
+          classNamed: 'modals-buttons-group'
+        },
+      ],
+    }
+    const { contentItems } = Object.assign({}, options, data)
+  -
+  header(class=`${headerClasss}`)
+    div(class=`${headerClasss}__container`)
+      div(class=`${headerClasss}__left`)
+        a(href="/" class=`${headerClasss}__logo`)
+          <i class="bi bi-github"></i>
+        div(class=`${headerClasss}__title`)
+          p STORE
+      div(class=`${headerClasss}__right`)
+        div(class=`${headerClasss}__signin`)
+          +Button({
+            type: 'button',
+            className: `modals-buttons-group`,
+            text: 'Sing In',
+            })(data-modal-target='signin-modal')
+        //-menuClass Block
+        +_headerMenu(options)
+
+

@@ -1,0 +1,51 @@
+//-------------------------------------- Shared 
+
+
+@import '../../shared/ui/common/Link/_Link.scss';
+@import '../../shared/ui/common/Button/_Button.scss';
+@import '../../shared/ui/common/Search-default/_Search-default.scss';
+@import '../../shared/ui/common/form-kit/Checkbox/_Checkbox.scss';
+
+
+
+
+
+@import '../../shared/ui/project/BurgerIcon/_BurgerIcon.scss';
+@import '../../shared/ui/project/Basket/_Basket.scss';
+@import '../../shared/ui/rarity/Newspaper/_Newspaper.scss';
+
+
+
+//-------------------------------------- Shared 
+//-------------------------------------- Entities
+@import '../../entities/CardProduct/_CardProduct.scss';
+//-------------------------------------- Entities 
+
+
+//-------------------------------------- Features 
+
+@import '../../features/TabbedSystem/_Tabbed-system.scss';
+
+//-------------------------------------- Features
+
+
+//- ---------------------------widgets
+
+
+@import '../../widgets/Modals/_Modals.scss';
+@import '../../widgets/Header/_index.scss';
+
+@import '../../widgets/Store-category/_Store-category.scss';
+@import '../../widgets/Home-page/_Home-page.scss';
+@import '../../widgets/Random-products/_index.scss';
+@import '../../widgets/Showcase/_Showcase.scss';
+
+@import '../../widgets/Footer/_Footer.scss';
+
+//- ---------------------------widgets
+
+
+
+//- ---------------------------pages
+
+@import '../Sections/_Sections.scss';
